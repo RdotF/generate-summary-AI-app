@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-blue-50 font-sans antialised">
+  <nav class="bg-green-300 p-4 text-black flex justify-between">
+    <div>
+      <h1 class="text-2xl font-bold">
+        Резюме видео с AI
+      </h1>
+    </div>
+    <div class="flex flex-col sm:flex-row justify-between items-end
+            space-y-2 sm:space-y-0 sm:space-x-4">
+        <div class="transition-transform transform hover:scale-105">
+        <a href="login.html" class=" p-1 text-black  hover:text-green-800">Войти</a>
+      </div>
+      <div class=" transition-transform transform hover:scale-105">
+        <a href="signup.html" class="p-1 text-black hover:text-green-800">Регистрация</a>
+      </div>
+       <div class=" transition-transform transform hover:scale-105">
+        <a href="history.html" class="p-1 text-black hover:text-green-800">История</a>
+      </div>
+    </div>
+  </nav>
+  <!-- main -->
+
+  <div class="container mx-auto mt-10 px-4 sm:px-0 ">
+    <div class="bg-green-50 p-6 shadow-md rounded-lg max-w-3xl mx-auto">
+      <section>
+        <h2 class="text-2xl mb-4 font-semibold text-center">Сгенерированный текст</h2>
+        <div class="border border-gray-400 p-4 rounded-lg">
+          <h3 class="text-lg font-semibold">Название текста</h3>
+          <p class="text-gray-800">текс т тек ст тет екс текст т  кст</p>
+          <hr class="my-4 border-gray-400">
+          <h4 class="text-lg font-semibold">Название видео</h4>
+          <p class="text-green-800">Title of the video</p>
+          <h4 class="text-lg font-semibold mt-4">Ссылка на видео</h4>
+          <a class="text-green-800 hover:underline" href="https://www.Youtube.com">https://www.Youtube.com</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+ <footer class="p-2 text-center mt-10">
+    Opensourced by <a href="https://github.com/RdotF" class="font-semibold text-green-600 hover:underline">RdotF</a>
+  </footer>
+</html>
