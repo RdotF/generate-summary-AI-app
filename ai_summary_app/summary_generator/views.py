@@ -81,7 +81,7 @@ def get_transcription(link):
   audio_file = download_audio(link)
   title = get_title_from_path(audio_file)
   #assembly ai 
-  aai.settings.api_key = 'assembly api key'
+  aai.settings.api_key = ''
   transcriber = aai.Transcriber()
   transcript = transcriber.transcribe(audio_file)
 
@@ -90,7 +90,7 @@ def get_transcription(link):
 
 
 def summarize_from_transcription(transcription):
-  client = Groq(api_key="GROK API KEY")
+  client = Groq(api_key="")
 
   #make a request 
   prompt = f'Based on the following transcript from a Youtube video, write a comprehensive and consize blog article (no more than 300 words!), write it based on the transcript but do not make it sound like a youtube video. You should summarize the text. Pay attention to in what language the transcript is. For example, if the transcript is in Russian, the output(your article) should also be in Russian. Also there should not be any styling. Simple text, without any headers or passages. Transcript:\n {transcription}'
@@ -131,7 +131,10 @@ def generate_summary(request):
       link = data['link']
     except (KeyError, json.JSONDecodeError):
       return JsonResponse({'error': 'Invalid data sent'}, status=400)
+    #Api tocken
     
+    #get title
+    title = get_video_title(link)
     
     # #get transcript
     transcription, title = get_transcription(link)
